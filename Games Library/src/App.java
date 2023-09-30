@@ -4,7 +4,10 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
         boolean isPlaying = true;
+        System.out.println("Welcome to the Games Library!");
         while (isPlaying) {
+            System.out.println("So far, there is only the Numbers Game in the " +
+                "library. Please excuse the lack of variety.");
             playNumbers();
             isPlaying = promptBool("\nDo you want to play another game? y/n");
         } // Exit while (isPlaying)
@@ -22,7 +25,7 @@ public class App {
             // Create variables.
             ArrayList guesses = new ArrayList();
             boolean gameOver = false;
-            System.out.println("Enter game difficulty.");
+            System.out.println("Enter game difficulty (Whole positive number).");
             int max = numbersScanner.nextInt();
             int randomNumber = (int)((Math.random() * max) + 1);
             
