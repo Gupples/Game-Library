@@ -7,7 +7,7 @@ public class App {
         Scanner myInput = new Scanner(System.in);
         while (isPlaying) {
             // playNumbers();
-            isPlaying = promptBool("Do you want to play again? y/n"); // prompt
+            isPlaying = promptBool("Do you want to play another game? y/n"); // prompt
 
             /* Convert the next block of code to stand-alone function 
             getStringInput(String prompt, String error). */
