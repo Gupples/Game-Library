@@ -4,29 +4,31 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
         boolean isPlaying = true;
-        Scanner myInput = new Scanner(System.in);
         while (isPlaying) {
-            // playNumbers();
-            isPlaying = promptBool("Do you want to play another game? y/n"); // prompt
-
-            /* Convert the next block of code to stand-alone function 
-            getStringInput(String prompt, String error). */
-        } // exit while (isPlaying)
-    }
+            playNumbers();
+            isPlaying = promptBool("\nDo you want to play another game? y/n");
+        } // Exit while (isPlaying)
+    } // Exit main()
 
     public static void playNumbers() {
         Scanner numbersScanner = new Scanner(System.in);
         boolean isPlayNumbers = true;
         while (isPlayNumbers) {
 
+            // Welcome the player.
+            System.out.println("\nWelcome to the Numbers game! Try to guess a " +
+            "random whole number.");
+
+            // Create variables.
+            ArrayList guesses = new ArrayList();
             boolean gameOver = false;
+            System.out.println("Enter game difficulty.");
+            int max = numbersScanner.nextInt();
+            int randomNumber = (int)((Math.random() * max) + 1);
+            
+            // Guess Number loop.
             while (!gameOver){
-                ArrayList guesses = new ArrayList();
-                // Get game ceiling.
-                System.out.println("Enter game difficulty.");
-                int max = numbersScanner.nextInt();
-                int randomNumber = (int)((Math.random() * max + 1) + 1);
-                System.out.println("Guess a random number between 1 and " + max);
+                System.out.println("\nGuess a whole number between 1 and " + max);
                 int numberGuess = numbersScanner.nextInt();
                 guesses.add(numberGuess);
                 if (numberGuess == randomNumber) {
@@ -40,19 +42,27 @@ public class App {
                     System.out.println("Too low.");
                 }
 
+                // Give reminder that the number should be between 1 and the 
+                // max.
+                if (numberGuess > max || numberGuess < 1) {
+                    System.out.println("The number is between 1 and " + max +
+                    ", friend. Try to keep your guesses between them. :)");
+                }
+
                 // Give game report.
                 if (gameOver) {
                     numbersSummary(guesses);
-                } // exit if (gameOver)
+                }
                 
-            } // exit while (!gameOver)
+            } // Exit while (!gameOver)
             
             // Prompt for another game of Numbers.
+            isPlayNumbers = promptBool("Would you like to play Numbers "+
+                "again? y/n");
 
-            
-        } // exit while (isPlayNumbers).
+        } // Exit while (isPlayNumbers).
         
-    } // exit playNumbers()
+    } // Exit playNumbers()
 
     /* numbersSummary */
     public static void numbersSummary(ArrayList guesses) {
@@ -61,45 +71,43 @@ public class App {
             appendix += "es";
         }
         appendix += ".";
-        System.out.println("You guessed the number in " + 
-        guesses.size() + appendix + "Your guesses were:");
+        System.out.println("\nYou guessed the number in " + 
+        guesses.size() + appendix + " Your guesses were:");
         System.out.println(guesses);
-    }
-
-    /* playHangman(). */
-    public static void playHangman() {
-
-    } // exit playHangman
+    } // Exit numbersSummary()
 
 
     /* promptBool()*/
     public static boolean promptBool(String prompt) {
+
+        // Create variables.
         Scanner boolScanner = new Scanner(System.in);
         String boolInput = ""; 
         boolean isValidBool = false;
+
+        // Do this while the input isn't a valid option.
         while (!isValidBool) {
             System.out.println(prompt);
             boolInput = boolScanner.next();
+
+            // Regex for purely alphabetical string.
             if (boolInput.matches("[a-zA-Z]+")) {
                 boolInput = boolInput.toLowerCase();
                 
-                // Pure debug if statement.
-                System.out.println("Your entry is purely alphabetical.");
-                if (boolInput.equals("y")) {
-                    System.out.println("Your input: " + boolInput);
-                }
-                
+                // If it is a valid option, exit the loop.
                 if (boolInput.equals("y") || boolInput.equals("n")) {
                     isValidBool = true;
                 }
 
             }
+
+            // Error line.
             if (!isValidBool) {
                 System.out.println("That wasn't an option. "
                 + "Please type 'y' or 'n'.");
             }
 
-        } // exit while (!isValidBool)
+        } // Exit while (!isValidBool)
 
         if (boolInput.equals("n")) {
             return false;
@@ -108,6 +116,6 @@ public class App {
             return true;
         }
 
-    }
+    } // Exit promptBool()
 
-}
+} // Exit App class.
