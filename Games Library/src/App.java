@@ -85,11 +85,11 @@ public class App {
                 
                 // Pure debug if statement.
                 System.out.println("Your entry is purely alphabetical.");
-                if (boolInput == "y") {
+                if (boolInput.equals("y")) {
                     System.out.println("Your input: " + boolInput);
                 }
                 
-                if (boolInput == "y" || boolInput == "n") {
+                if (boolInput.equals("y") || boolInput.equals("n")) {
                     isValidBool = true;
                 }
 
@@ -101,7 +101,7 @@ public class App {
 
         } // exit while (!isValidBool)
 
-        if (boolInput == "n") {
+        if (boolInput.equals("n")) {
             return false;
         }
         else {
