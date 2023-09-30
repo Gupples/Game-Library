@@ -79,13 +79,14 @@ public class App {
         boolean isValidBool = false;
         while (!isValidBool) {
             System.out.println(prompt);
-            boolInput = boolScanner.nextLine();
+            boolInput = boolScanner.next();
             if (boolInput.matches("[a-zA-Z]+")) {
                 boolInput = boolInput.toLowerCase();
-
-                // Debug code.
+                
+                // Pure debug if statement.
+                System.out.println("Your entry is purely alphabetical.");
                 if (boolInput == "y") {
-                    System.out.println(boolInput);
+                    System.out.println("Your input: " + boolInput);
                 }
                 
                 if (boolInput == "y" || boolInput == "n") {
