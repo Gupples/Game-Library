@@ -29,7 +29,7 @@ public class App {
         while (isPlayNumbers) {
 
             boolean gameOver = false;
-            while (gameOver == false){
+            while (!gameOver){
                 ArrayList guesses = new ArrayList();
                 // Get game ceiling.
                 System.out.println("Enter game difficulty.");
