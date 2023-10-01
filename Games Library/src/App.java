@@ -12,7 +12,7 @@ public class App {
             isPlaying = promptBool("\nDo you want to play another game? y/n");
 
         } // Exit while (isPlaying)
-        
+
     } // Exit main()
 
     public static void playNumbers() {
