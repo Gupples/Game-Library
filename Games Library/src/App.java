@@ -10,7 +10,9 @@ public class App {
                 "library. Please excuse the lack of variety.");
             playNumbers();
             isPlaying = promptBool("\nDo you want to play another game? y/n");
+
         } // Exit while (isPlaying)
+        
     } // Exit main()
 
     public static void playNumbers() {
