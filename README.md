@@ -1,36 +1,30 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
-In order for me to increase my abilities as a programmer and expand my employment opportunities and capabilities, I am expanding my knowledge base and learning new languages that I haven't worked with before. 
+In order for me to increase my abilities as a programmer and expand my employment opportunities and capabilities, I am expanding my knowledge base and learning new languages that I haven't worked with before. This will show how quickly I am able to develop new programs in languages that I am unfamiliar with and how quickly I can adapt.
+
+I created a Games Library program, where the goal was to create a library of games that the user can play. As of yet, I was only able to make a single game, but it was enough for me to understand and demonstrate my understanding of how to store variables, accept input from a user, the differences between the == comparator and the obj.equals() method, and the use of certain libraries.
 
 
-{Provide a description of the software that you wrote to demonstrate the Java language.}
 
-{Describe your purpose for writing this software.}
+My purpose for writing this software was to demonstrate what I learned about the Java language in the short time I studied it.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/QAD8Bm-2D0E)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
 The text editor that I developed this software with was Visual Studios Code, after installing the Java Development Kit (JDK).
 
-{Describe the programming language that you used and any libraries.}
 I used Java as the programming language, and the libraries I included were java.util.Scanner for input functionality and java.util.ArrayList to enable a dynamic array for storage in the Numbers game.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 
 - [W3Schools Java Tutorial](https://www.w3schools.com/java/default.asp)
 - [Difference between comparing String using == and .equals() method in Java - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-and-equals-method-in-java/#)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 
 - Program more games and add them to the library, such as Hangman, Hilo, and Black Jack.
-- Add error handling to increase program robustness, so people can continually play despite entering improper inputs.
-- Item 3
+- Add more error handling to increase program robustness, so people can continually play despite entering improper inputs.
